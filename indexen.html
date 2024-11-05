@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monitor and Block API Calls in WordPress</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="impress">
+
+    <!-- Slide 1 -->
+    <div id="slide-1" class="step" data-x="0" data-y="0">
+        <h1>Monitor and Block API Calls in WordPress to Improve Security and Performance</h1>
+        <h2>A Guide for Developers and Site Managers</h2>
+        <img src="images/immagine_1.webp" alt="Slide 1">
+    </div>
+
+    <!-- Slide 2 -->
+    <div id="slide-2" class="step" data-x="1000" data-y="0">
+        <h1>Why Monitor API Calls?</h1>
+        <p>Unmonitored API calls can slow down the site and compromise security.</p>
+        <ul>
+            <li>Reduce the risk of unauthorized access</li>
+            <li>Gain more control and insight into API calls</li>
+            <li>Optimize performance</li>
+        </ul>
+        <img src="images/immagine_2.webp" alt="Slide 2">
+    </div>
+
+    <!-- Slide 3 -->
+    <div id="slide-3" class="step" data-x="2000" data-y="1000" data-rotate="15">
+        <h1>Implementation Goals</h1>
+        <h2>Log all API calls</h2>
+        <h2>Block calls to unwanted domains</h2>
+        <p>The goal is to create a system that logs each API call and blocks calls from domains we want to restrict.</p>
+        <img src="images/immagine_3.webp" alt="Slide 3">
+    </div>
+
+    <!-- Slide 4 -->
+    <div id="slide-4" class="step" data-x="3000" data-y="0" data-z="-1000" data-rotate="30">
+        <h1>Code to Intercept and Block API Calls</h1>
+        <pre><code>
+// Example code for the pre_http_request filter
+add_filter('pre_http_request', 'intercept_and_block_api', 10, 3);
+function intercept_and_block_api($pre, $args, $url) {
+    // Logic to block unwanted domains and log API calls
+}
+        </code></pre>
+        <img src="images/immagine_4.webp" alt="Slide 4">
+    </div>
+
+    <!-- Slide 5 -->
+    <div id="slide-5" class="step" data-x="4000" data-y="-1000" data-rotate="45">
+        <h1>Creating the <code>api_logs</code> Table</h1>
+        <p>Structure of the <code>api_logs</code> table:</p>
+        <ul>
+            <li><code>id</code></li>
+            <li><code>url</code></li>
+            <li><code>status</code> (allowed/blocked)</li>
+            <li><code>timestamp</code></li>
+        </ul>
+        <img src="images/immagine_5.webp" alt="Slide 5">
+    </div>
+
+    <!-- Slide 6 -->
+    <div id="slide-6" class="step" data-x="5000" data-y="0" data-z="1000" data-rotate="60">
+        <h1>Using the Code Snippets Plugin</h1>
+        <p>Insert, edit, and activate code snippets directly from the WordPress backend.</p>
+        <img src="images/immagine_6.webp" alt="Slide 6">
+    </div>
+
+    <!-- Slide 7 -->
+    <div id="slide-7" class="step" data-x="6000" data-y="1000" data-z="3000" data-rotate="75">
+        <h1>Benefits of Implementation</h1>
+        <h2>Local Development</h2>
+        <ul>
+            <li>Advanced debugging</li>
+            <li>API call optimization</li>
+        </ul>
+        <h2>Production</h2>
+        <ul>
+            <li>Enhanced security</li>
+            <li>Optimized performance</li>
+            <li>Regulatory compliance</li>
+        </ul>
+        <img src="images/immagine_7.webp" alt="Slide 7">
+    </div>
+
+    <!-- Slide 8 -->
+    <div id="slide-8" class="step" data-x="7000" data-y="0" data-z="-1000" data-rotate="90">
+        <h1>Extensions and Possible Improvements</h1>
+        <ul>
+            <li>Admin interface for viewing logs</li>
+            <li>Real-time notifications for blocked calls</li>
+            <li>Dynamic configuration of blocked domains</li>
+        </ul>
+        <img src="images/immagine_8.webp" alt="Slide 8">
+    </div>
+
+    <!-- Slide 9 -->
+    <div id="slide-9" class="step" data-x="8000" data-y="-1000" data-rotate="105">
+        <h1>Final Tips for Security and Performance</h1>
+        <ul>
+            <li>Perform regular database backups</li>
+            <li>Monitor database impact</li>
+            <li>Optimize the log table for performance</li>
+        </ul>
+        <img src="images/immagine_9.webp" alt="Slide 9">
+    </div>
+
+    <!-- Slide 10 -->
+    <div id="slide-10" class="step" data-x="9000" data-y="0" data-rotate="120">
+        <h1>Take Control of API Calls on Your WordPress Site!</h1>
+        <p>Read the full article for technical details and code!</p>
+        <a href="LINK_TO_ARTICLE">Visit the article</a>
+        <img src="images/immagine_10.webp" alt="Slide 10">
+    </div>
+
+</div>
+
+<script src="impress.js"></script>
+<script>
+    impress().init();
+</script>
+
+</body>
+</html>
